@@ -1,0 +1,19 @@
+{
+  "name": "magenta-tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Can be used to restart a Magenta router remotely.",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "lodash": "^4.17.21",
+    "tough-cookie": "^5.0.0"
+  }
+}

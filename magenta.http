@@ -1,0 +1,21 @@
+@host = http://192.168.0.1
+# echo -n '12345678' | sha256sum
+@password = {{$dotenv SHA256_HASHED_PASSWORD}}
+
+GET {{host}}/
+
+###
+POST {{host}}/xml/setter.xml
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+token=<insert-sessionToken-from-previous-response>
+&fun=15
+&Username=NULL
+&Password={{password}}
+
+###
+POST {{host}}/xml/setter.xml
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+token=<insert-sessionToken-from-previous-response>
+&fun=8
